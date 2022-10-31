@@ -5,7 +5,7 @@ import './Expenses.css';
 import Card from '../UI/Card';
 import '../UI/Card.css';
 function Expenses(props)
-{  const[year,setYear]=useState("");
+{  const[year,setYear]=useState("2022");
   const yearFilterEventHandler=(y)=>{
     console.log('In Expenses.jsx '+ y);
     setYear(y);
@@ -16,13 +16,14 @@ function Expenses(props)
     <div>
       <Card className="expenses">
         <ExpenseFilter selected={year} onYearFilter={yearFilterEventHandler} />
-        {props.items.map((expense) => (
-          <ExpenseItem
+        {props.items.map((expense) => {
+         if(expense.date.getFullYear()==year)
+         {return <ExpenseItem
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
-          ></ExpenseItem>
-        ))}
+          ></ExpenseItem>;}
+        })}
       </Card>
     </div>
   );
