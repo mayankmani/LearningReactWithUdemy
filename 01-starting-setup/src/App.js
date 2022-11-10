@@ -5,9 +5,9 @@ import NewExpense from "./components/NewExpenses/NewExpense";
 const App=()=> {
   const DUMMY_EXPENSES=[
     {     id:'e1',title:'Car Insurance',     amount:400,     date: new Date(2022,10,21)    },
-    {      id:'e2',title:'Truck Insurance',      amount:450,      date: new Date(2023,10,21)    },
-    {      id:'e3',title:'House Insurance',      amount:500,      date: new Date(2024,10,21)    },
-    {      id:'e4',title:'Life Insurance',      amount:550,      date: new Date(2025,10,21)      }
+    {      id:'e2',title:'Truck Insurance',      amount:450,      date: new Date(2023,11,21)    },
+    {      id:'e3',title:'House Insurance',      amount:500,      date: new Date(2024,9,21)    },
+    {      id:'e4',title:'Life Insurance',      amount:550,      date: new Date(2025,8,21)      }
   ];
   const [expenses, setExpenses]=useState(DUMMY_EXPENSES);
   const addExpenseHandler = (expense) => {
